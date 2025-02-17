@@ -1,0 +1,27 @@
+name: Lint with Pylint
+
+on:
+  workflow_call:
+    inputs:
+      source_dir:
+        required: true
+        type: string
+
+jobs:
+  Ruff:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: ruff check
+      uses: astral-sh/ruff-action@v3
+      with:
+        src: ${{ inputs.source_dir }}
+
+    - name: ruff format --check
+      uses: astral-sh/ruff-action@v3
+      with:
+        src: ${{ inputs.source_dir }}
+        args: format --check
