@@ -28,4 +28,4 @@ jobs:
 
     - name: Run Pylint
       run: |
-        pylint ${{ inputs.project_name }}
+        pylint ${{ inputs.source_dir }}
