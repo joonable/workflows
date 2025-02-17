@@ -9,7 +9,7 @@ on:
 
 
 jobs:
-  lint:
+  pylint:
     runs-on: ubuntu-latest
 
     steps:
