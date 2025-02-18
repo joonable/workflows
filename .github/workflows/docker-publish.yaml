@@ -33,3 +33,4 @@ jobs:
           tags: latest, ${{ inputs.docker_tag }}
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+          push: true
